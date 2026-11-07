@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ViewTransitions } from "next-view-transitions";
 import { ThemeProvider } from "next-themes";
+import { RootProvider } from "fumadocs-ui/provider/next";
 
 import { cn } from "@/lib/utils";
 
@@ -38,16 +39,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         )}
       >
         <body className="min-h-full flex flex-col">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="flex flex-col min-h-screen">
-              <div className="flex-1">{children}</div>
-            </div>
-          </ThemeProvider>
+          <RootProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <div className="flex flex-col min-h-screen">
+                <div className="flex-1">{children}</div>
+              </div>
+            </ThemeProvider>
+          </RootProvider>
         </body>
       </html>
     </ViewTransitions>

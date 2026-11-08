@@ -7,25 +7,21 @@ import path from "path";
 const REGISTRY_BASE_PATH = path.join(process.cwd(), "src");
 const PUBLIC_FOLDER_BASE_PATH = "public/r";
 
-// const REGISTRY_TYPE_FOLDERS: Record<string, string> = {
-//     "registry:component": "components",
-//     "registry:hook": "hooks",
-//     "registry:lib": "lib",
-//     "registry:block": "blocks",
-// };
+type File = z.infer<typeof registryItemFileSchema>;
 
 /**
  * bun run ./scripts/build-registry.ts
- *
  */
-type File = z.infer<typeof registryItemFileSchema>;
+
+// Remove leading slashes so registry paths remain relative.
+const normalizeRegistryPath = (filePath: string) =>
+  filePath.replace(/^\/+/, "");
 
 async function writeFileRecursive(filePath: string, data: string) {
   const dir = path.dirname(filePath);
 
   try {
     await fs.mkdir(dir, { recursive: true });
-
     await fs.writeFile(filePath, data, "utf-8");
     console.log(`File written to ${filePath}`);
   } catch (error) {
@@ -35,65 +31,56 @@ async function writeFileRecursive(filePath: string, data: string) {
 }
 
 const getComponentFiles = async (files: File[], registryType: string) => {
-  const filesArrayPromises = (files ?? []).map(async (file) => {
-    if (typeof file === "string") {
-      const normalizedPath = file.startsWith("/") ? file : `/${file}`;
-      const filePath = path.join(REGISTRY_BASE_PATH, normalizedPath);
-      const fileContent = await fs.readFile(filePath, "utf-8");
+  const filesArrayPromises = files.map(async (file) => {
+    const isString = typeof file === "string";
 
-      const fileName = normalizedPath.split("/").pop() || "";
+    const sourcePath = normalizeRegistryPath(isString ? file : file.path);
 
-      return {
-        type: registryType,
-        content: fileContent,
-        path: normalizedPath,
-        target: `/components/codesnippetui/${fileName}`,
-      };
-    }
-    const normalizedPath = file.path.startsWith("/")
-      ? file.path
-      : `/${file.path}`;
-    const filePath = path.join(REGISTRY_BASE_PATH, normalizedPath);
+    const filePath = path.join(REGISTRY_BASE_PATH, sourcePath);
     const fileContent = await fs.readFile(filePath, "utf-8");
 
-    const fileName = normalizedPath.split("/").pop() || "";
+    const fileName = path.basename(sourcePath);
 
     const getTargetPath = (type: string) => {
       switch (type) {
         case "registry:hook":
-          return `/hooks/${fileName}`;
+          return `hooks/${fileName}`;
+
         case "registry:lib":
-          return `/lib/${fileName}`;
+          return `lib/${fileName}`;
+
         case "registry:block":
-          return `/blocks/${fileName}`;
+          return `blocks/${fileName}`;
+
         default:
-          return `/components/codesnippetui/${fileName}`;
+          return `components/codesnippetui/${fileName}`;
       }
     };
 
-    const fileType =
-      typeof file === "string" ? registryType : file.type || registryType;
+    const fileType = isString ? registryType : file.type || registryType;
+
+    const target = isString
+      ? getTargetPath(registryType)
+      : normalizeRegistryPath(file.target || getTargetPath(fileType));
 
     return {
       type: fileType,
       content: fileContent,
-      path: normalizedPath,
-      target:
-        typeof file === "string"
-          ? getTargetPath(registryType)
-          : file.target || getTargetPath(fileType),
+      path: sourcePath,
+      target,
     };
   });
 
-  const filesArray = await Promise.all(filesArrayPromises);
-  return filesArray;
+  return Promise.all(filesArrayPromises);
 };
 
 const main = async () => {
-  for (let i = 0; i < registry.length; i++) {
-    const component = registry[i];
+  for (const component of registry) {
     const files = component.files;
-    if (!files) throw new Error("No files found for component");
+
+    if (!files) {
+      throw new Error(`No files found for component: ${component.name}`);
+    }
 
     const filesArray = await getComponentFiles(files, component.type);
 
@@ -105,16 +92,19 @@ const main = async () => {
       null,
       2,
     );
+
     const jsonPath = `${PUBLIC_FOLDER_BASE_PATH}/${component.name}.json`;
+
     await writeFileRecursive(jsonPath, json);
-    console.log(json);
+    console.log(`Generated registry: ${component.name}`);
   }
 };
 
 main()
   .then(() => {
-    console.log("done");
+    console.log("Registry generation completed!");
   })
   .catch((err) => {
-    console.error(err);
+    console.error("Registry generation failed:", err);
+    process.exitCode = 1;
   });

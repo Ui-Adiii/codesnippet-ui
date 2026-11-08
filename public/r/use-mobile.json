@@ -5,8 +5,8 @@
     {
       "type": "registry:hook",
       "content": "import * as React from \"react\";\r\n\r\nconst MOBILE_BREAKPOINT = 768;\r\n\r\nexport function useIsMobile() {\r\n    const [isMobile, setIsMobile] = React.useState<boolean | undefined>(\r\n        undefined\r\n    );\r\n\r\n    React.useEffect(() => {\r\n        const mql = window.matchMedia(\r\n            `(max-width: ${MOBILE_BREAKPOINT - 1}px)`\r\n        );\r\n        const onChange = () => {\r\n            setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);\r\n        };\r\n        mql.addEventListener(\"change\", onChange);\r\n        setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);\r\n        return () => mql.removeEventListener(\"change\", onChange);\r\n    }, []);\r\n\r\n    return !!isMobile;\r\n}\r\n",
-      "path": "/hooks/use-mobile.ts",
-      "target": "/hooks/use-mobile.ts"
+      "path": "hooks/use-mobile.ts",
+      "target": "hooks/use-mobile.ts"
     }
   ]
 }

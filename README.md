@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeSnippetUI
 
-## Getting Started
+Copy, Paste, Customize. A collection of modern, interactive, customizable UI components for React & Next.js.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Components** — Buttons, Cards, Inputs, Alerts, Lists, Text, Pricing, Profile, FAQ, AI Input, and more
+- **Blocks** — Ready-to-use page sections: AI Card Generation, AI Chat, Auth Basic, Dashboard, Minimal Shop
+- **Hooks** — useAutoResizeTextarea and other React hooks
+- **Tailwind CSS v4** — Utility-first styling with the `cn` helper
+- **Lucide Icons** — Beautiful iconography included
+- **shadcn/ui compatible** — Install via CLI with `shadcn add`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Category | Components |
+|----------|------------|
+| Buttons | btn-01 to btn-15 |
+| Cards | card-01 to card-10 |
+| Inputs | input-01 to input-10 |
+| Alerts | alert-01 to alert-07 |
+| Lists | list-01 to list-06 |
+| Text | text-01 to text-06 |
+| Pricing | pricing-01 to pricing-06 |
+| Profile | profile-01 to profile-05 |
+| FAQ | faq-01 to faq-04 |
+| AI Input | ai-input-01 to ai-input-17 |
+| Others | Action Search Bar, Avatar Picker, Backgrounds, Bento Grid, Checkout, Currency Transfer, Hand Written Title, Hero Geometric, Matrix Text, Particle Button, Particles Background, Toolbar, Tweet Card, Vercel v0 Chat |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Blocks
 
-## Learn More
+- AI Card Generation
+- AI Chat
+- Auth Basic
+- Dashboard
+- Minimal Shop
 
-To learn more about Next.js, take a look at the following resources:
+## Available Hooks
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- useAutoResizeTextarea
+- useClickOutside
+- useCopyToClipboard
+- useMobile
+- useDebounce
+- useFileInput
+- useIntersection
+- useTags
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16, React 19
+- Tailwind CSS v4
+- TypeScript
+- Lucide React, Framer Motion, Shiki

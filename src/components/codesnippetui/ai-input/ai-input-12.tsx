@@ -13,22 +13,22 @@ import { cn } from "@/lib/utils";
 import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea";
 
 const AVATARS = [
-    {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-01-n0x8HFv8EUetf9z6ht0wScJKoTHqf8.png",
-        nickname: "Sarah Chen",
-    },
-    {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
-        nickname: "Michael Johnson",
-    },
-    {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-03-JateJIUhtd3PXynaMG9TDWQ55j5AVP.png",
-        nickname: "Emma Wilson",
-    },
-    {
-        src: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-04-uuYHWIRvVPi01gEt6NwnGyjqLeeZhz.png",
-        nickname: "David Brown",
-    },
+  {
+    src: "https://randomuser.me/api/portraits/men/46.jpg",
+    nickname: "Sarah Chen",
+  },
+  {
+    src: "https://randomuser.me/api/portraits/men/32.jpg",
+    nickname: "Michael Johnson",
+  },
+  {
+    src: "https://randomuser.me/api/portraits/women/68.jpg",
+    nickname: "Emma Wilson",
+  },
+  {
+    src: "https://randomuser.me/api/portraits/women/65.jpg",
+    nickname: "David Brown",
+  },
 ];
 
 export default function AIInput_12() {

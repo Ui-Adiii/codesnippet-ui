@@ -26,30 +26,33 @@ interface CheckoutInteractionProps {
 }
 
 const defaultProducts: Product[] = [
-    {
-        id: "1",
-        name: "Air Max 90",
-        price: 129.99,
-        category: "Running",
-        image: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/shoes-d2GWFGnVlkkUneRD3x2xDbUVHO1qMp",
-        color: "Black/White",
-    },
-    {
-        id: "2",
-        name: "Ultra Boost",
-        price: 179.99,
-        category: "Performance",
-        image: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/shoes-d2GWFGnVlkkUneRD3x2xDbUVHO1qMp",
-        color: "Grey/Blue",
-    },
-    {
-        id: "3",
-        name: "Classic Trainer",
-        price: 89.99,
-        category: "Casual",
-        image: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/shoes-d2GWFGnVlkkUneRD3x2xDbUVHO1qMp",
-        color: "White/Red",
-    },
+  {
+    id: "1",
+    name: "Air Max 90",
+    price: 129.99,
+    category: "Running",
+    image:
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop",
+    color: "Black/White",
+  },
+  {
+    id: "2",
+    name: "Ultra Boost",
+    price: 179.99,
+    category: "Performance",
+    image:
+      "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800&auto=format&fit=crop",
+    color: "Grey/Blue",
+  },
+  {
+    id: "3",
+    name: "Classic Trainer",
+    price: 89.99,
+    category: "Casual",
+    image:
+      "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?w=800&auto=format&fit=crop",
+    color: "White/Red",
+  },
 ];
 
 export default function CheckoutInteraction({

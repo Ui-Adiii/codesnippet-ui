@@ -26,7 +26,7 @@ interface Profile01Props {
 const defaultProfile = {
     name: "John Doe",
     role: "Prompt Engineer",
-    avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
+    avatar:  "https://randomuser.me/api/portraits/men/51.jpg",
     subscription: "Free Trial",
 } satisfies Required<Profile01Props>;
 

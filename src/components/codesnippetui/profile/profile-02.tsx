@@ -13,13 +13,13 @@ interface Profile02Props {
 }
 
 const defaultProfile = {
-    name: "Alex Thompson",
-    role: "Product Designer",
-    avatar: "https://ferf1mheo22r9ira.public.blob.vercel-storage.com/avatar-02-albo9B0tWOSLXCVZh9rX9KFxXIVWMr.png",
-    location: "San Francisco, CA",
-    email: "hello@codesnippetui.com",
-    website: "https://ui.codesnipet.dev/",
-    bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
+  name: "Alex Thompson",
+  role: "Product Designer",
+  avatar: "https://randomuser.me/api/portraits/men/41.jpg",
+  location: "San Francisco, CA",
+  email: "hello@codesnippetui.com",
+  website: "https://ui.codesnipet.dev/",
+  bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
 } satisfies Required<Profile02Props>;
 
 export default function Profile02({

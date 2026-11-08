@@ -72,39 +72,32 @@ const socials = [
 const Footer=()=> {
   return (
     <footer className="relative isolate overflow-hidden border-t border-zinc-800/80 bg-black text-zinc-400">
-
       {/* Background glow */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -z-10 h-80 w-[500px] -translate-x-1/2 rounded-full bg-purple-600/10 blur-[120px]" />
 
       <div className="mx-auto max-w-7xl px-6 pt-16 md:px-10 lg:px-8">
-
         {/* Main footer */}
-        <div className="grid grid-cols-1 gap-12 pb-16 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10">
-
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 pb-10 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-10 lg:pb-16">
           {/* Brand section */}
-          <div className="max-w-sm">
-
-            <Link
-              href="/"
-              className="group inline-flex items-center gap-2"
-            >
-              <span className="text-xl font-bold tracking-tight text-white">
+          <div className="col-span-2 max-w-sm lg:col-span-1">
+            <Link href="/" className="group inline-flex items-center gap-2">
+              <span className="text-xl font-bold tracking-tight text-white sm:text-2xl">
                 CodeSnippet
                 <span className="bg-gradient-to-r from-rose-500 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent">
                   UI
                 </span>
               </span>
 
-              <ArrowUpRight className="h-4 w-4 text-purple-400 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+              <ArrowUpRight className="h-4 w-4 text-purple-400 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
             </Link>
 
-            <p className="mt-5 text-sm leading-7 text-zinc-500">
-              Build beautiful interfaces faster with a curated collection
-              of premium React components, blocks and developer tools.
+            <p className="mt-4 max-w-xs text-sm leading-6 text-zinc-500 sm:mt-5 sm:leading-7">
+              Build beautiful interfaces faster with a curated collection of
+              premium React components, blocks and developer tools.
             </p>
 
             {/* Social icons */}
-            <div className="mt-7 flex items-center gap-3">
+            <div className="mt-6 flex items-center gap-3 sm:mt-7">
               {socials.map((social) => (
                 <Link
                   key={social.name}
@@ -112,26 +105,24 @@ const Footer=()=> {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="group rounded-xl border border-zinc-800 bg-zinc-900/40 p-2.5 text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/50 hover:bg-purple-500/10 hover:text-white"
+                  className="group flex size-10 items-center justify-center rounded-xl border border-zinc-800 bg-zinc-900/40 text-zinc-400 transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/50 hover:bg-purple-500/10 hover:text-white"
                 >
-                  <span className="block size-4">
+                  <span className="flex size-4 items-center justify-center">
                     {social.icon}
                   </span>
                 </Link>
               ))}
             </div>
-
           </div>
 
           {/* Navigation columns */}
           {footerLinks.map((group) => (
-            <div key={group.title}>
-
-              <h3 className="mb-6 text-sm font-semibold text-white">
+            <div key={group.title} className="min-w-0">
+              <h3 className="mb-4 text-sm font-semibold text-white sm:mb-6">
                 {group.title}
               </h3>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3 sm:space-y-4">
                 {group.links.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -140,20 +131,17 @@ const Footer=()=> {
                     >
                       {link.label}
 
-                      <ArrowUpRight className="h-3 w-3 opacity-0 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
+                      <ArrowUpRight className="hidden h-3 w-3 opacity-0 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100 sm:block" />
                     </Link>
                   </li>
                 ))}
               </ul>
-
             </div>
           ))}
-
         </div>
 
         {/* Bottom footer */}
         <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-800/80 py-7 text-xs sm:flex-row">
-
           <p className="text-zinc-500">
             © {new Date().getFullYear()} CodeSnippetUI. All rights reserved.
           </p>
@@ -174,14 +162,11 @@ const Footer=()=> {
             className="group flex items-center gap-2 text-zinc-400 transition-colors hover:text-white"
           >
             Back to top
-
             <span className="rounded-md border border-zinc-800 p-1 transition-all group-hover:border-purple-500/50 group-hover:bg-purple-500/10">
               <ArrowUp className="h-3.5 w-3.5" />
             </span>
           </button>
-
         </div>
-
       </div>
     </footer>
   );

@@ -6,8 +6,7 @@ import {
     Plus,
     Settings2,
     Shield,
-    Github,
-    Linkedin,
+    
     MapPin,
 } from "lucide-react";
 import Image from "next/image";
@@ -173,7 +172,7 @@ export default function Profile05({
                                                     target="_blank"
                                                     className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400"
                                                 >
-                                                    <Github className="w-4 h-4" />
+                                                    <Settings2 className="w-4 h-4" />
                                                 </a>
                                             )}
                                             {member.social.linkedin && (
@@ -181,7 +180,7 @@ export default function Profile05({
                                                     href="#"
                                                     className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-500 dark:text-zinc-400"
                                                 >
-                                                    <Linkedin className="w-4 h-4" />
+                                                    <Settings2 className="w-4 h-4" />
                                                 </a>
                                             )}
                                         </div>

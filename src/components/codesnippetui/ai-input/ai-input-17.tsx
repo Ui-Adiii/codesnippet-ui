@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { useAutoResizeTextarea } from "@/hooks/use-auto-resize-textarea";
-import { ArrowUpCircle, Paperclip, Globe, Figma } from "lucide-react";
+import { ArrowUpCircle, Paperclip, Globe } from "lucide-react";
 
 export default function AIInput_17() {
     const [value, setValue] = useState("");
@@ -74,7 +74,7 @@ export default function AIInput_17() {
                                     type="button"
                                     className="p-2 text-black/50 dark:text-white/50 hover:text-black dark:hover:text-white transition-colors rounded-lg border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20"
                                 >
-                                    <Figma className="w-4 h-4 text-pink-500" />
+                                    <Globe className="w-4 h-4 text-pink-500" />
                                 </button>
                             </div>
                             <button

@@ -3,17 +3,21 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import { Twitter, Facebook, Linkedin, Link } from "lucide-react";
-
+import {
+//   Facebook,
+//   Linkedin,
+  Link,
+  Share2,
+} from "lucide-react";
 export default function Btn08({
     className,
     ...props
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) {
     const [isHovered, setIsHovered] = useState(false);
     const shareButtons = [
-        { icon: Twitter },
-        { icon: Facebook },
-        { icon: Linkedin },
+        { icon: Link },
+        { icon: Share2 },
+        { icon: Link },
         { icon: Link },
     ];
 

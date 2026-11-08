@@ -39,11 +39,9 @@
         "components/input",
         "components/list",
         "components/profile",
+        "components/pricing",
         "components/text",
         "---Hooks---",
-        "hooks/use-tags",
-        "hooks/use-click-outside",
-        "hooks/use-auto-resize-textarea",
-        "hooks/use-file-input"
+        "hooks/use-auto-resize-textarea"
     ]
 }

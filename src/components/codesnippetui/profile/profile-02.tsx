@@ -18,7 +18,7 @@ const defaultProfile = {
   avatar: "https://randomuser.me/api/portraits/men/41.jpg",
   location: "San Francisco, CA",
   email: "hello@codesnippetui.com",
-  website: "https://ui.codesnipet.dev/",
+  website: "https://codesnippet-ui.vercel.app/",
   bio: "Designing interfaces that bridge the gap between complexity and simplicity.",
 } satisfies Required<Profile02Props>;
 

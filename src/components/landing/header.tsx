@@ -70,17 +70,18 @@ export default function Header() {
                   {/* Desktop Navigation Links */}
                   <div className="hidden sm:flex items-center gap-4">
                     <ViewTransitionsLink
-                      href="/docs/components/background-paths"
+                      href="/docs/components/action-search-bar"
                       className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                     >
                       Components
                     </ViewTransitionsLink>
-                    {/* <ViewTransitionsLink
-                                            href="/pricing"
-                                            className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
-                                        >
-                                            Pricing
-                                        </ViewTransitionsLink> */}
+                    <span className="text-zinc-300 dark:text-zinc-700">|</span>
+                    <ViewTransitionsLink
+                      href="/docs"
+                      className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                    >
+                      Docs
+                    </ViewTransitionsLink>
                     {/* <Link
                       href="https://codesnippetui.pro/templates?utm_source=codesnippetui.com&utm_medium=header"
                       target="_blank"
@@ -110,10 +111,10 @@ export default function Header() {
                     Components
                   </ViewTransitionsLink>
                   <ViewTransitionsLink
-                    href="/pricing"
+                    href="/docs"
                     className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
                   >
-                    Pricing
+                    Docs
                   </ViewTransitionsLink>
                   <ThemeToggle />
                 </div>

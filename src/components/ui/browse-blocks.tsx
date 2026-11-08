@@ -11,7 +11,7 @@ export function BrowseBlocksButton() {
   return (
     <Link
       id="browse-blocks-button"
-      href="https://kokonutui.pro/templates"
+      href="https://codesnippet-ui.vercel.app/docs/blocks/ai-card-generation"
       className="flex items-center gap-8"
     >
       <motion.div

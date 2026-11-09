@@ -3,119 +3,199 @@ title: Installation
 description: Getting started with codesnippetui
 icon: ListStart
 ---
+---
+title: Installation
+description: Get started with CodeSnippetUI and install your first component.
+icon: ListStart
+---
 
-### 1. Install utilities
+import { Tabs, Tab } from "fumadocs-ui/components/tabs";
+import { Callout } from "fumadocs-ui/components/callout";
 
+### 1. Prerequisites
 
-All components use [Tailwind CSS v4](https://tailwindcss.com/docs/installation/framework-guides/nextjs), so ensure it's installed in your project.
-Many components also use the `cn` utility function—install it with the following command:
+Before installing CodeSnippetUI, make sure your project meets the following requirements:
 
-<Tabs items={["bun", "npx", "pnpm"]}>
- 
-```bash tab="bun"
-bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/utils.json 
-```
- 
-```bash tab="npx"
-npx shadcn@latest add https://codesnippet-ui.vercel.app/r/utils.json
-```
+- React 18 or later
+- Next.js or Vite
+- Tailwind CSS v4
+- Node.js 18 or later
+- [shadcn/ui](https://ui.shadcn.com/) CLI
 
-```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://codesnippetui/r/utils.json
-```
+All CodeSnippetUI components are built with Tailwind CSS v4. Make sure it is properly configured in your project before installing components.
 
+For Next.js, follow the [Tailwind CSS v4 installation guide](https://tailwindcss.com/docs/installation/framework-guides/nextjs).
+
+### 2. Install Utilities
+
+Many components use the `cn` utility function to merge Tailwind CSS classes.
+
+Install the utility using the command below:
+
+<Tabs items={["bun", "npm", "pnpm"]}>
+  <Tab value="bun">
+    ```bash
+    bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/utils.json
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```bash
+    npx shadcn@latest add https://codesnippet-ui.vercel.app/r/utils.json
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/utils.json
+    ```
+  </Tab>
 </Tabs>
 
-### 2. That's it 🎉
+This will automatically add the required utility files to your project.
 
-We use [lucide-icons](https://lucide.dev/guide/installation) for most components that include icons, along with some [shadcn/ui](https://ui.shadcn.com/) components. These dependencies will be automatically installed when using the CLI.
+### 3. Install Your First Component
 
-For exemple to add `card-05` to your project, it will be easy as:
+That's it! You're ready to start installing components.
 
-<Tabs items={["bun", "npx", "pnpm"]}>
- 
-```bash tab="bun"
-bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json
-```
- 
-```bash tab="npx"
-npx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json
-```
+CodeSnippetUI uses [Lucide Icons](https://lucide.dev/guide/installation) for most icons and selected [shadcn/ui](https://ui.shadcn.com/) components.
 
-```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json
-```
+When installing a component through the CLI, its required files and dependencies are automatically handled whenever they are declared in the registry.
 
+For example, to install `card-05`:
+
+<Tabs items={["bun", "npm", "pnpm"]}>
+  <Tab value="bun">
+    ```bash
+    bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```bash
+    npx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json
+    ```
+  </Tab>
 </Tabs>
 
-_While we provide a convenient 'copy' button for the code, we strongly recommend using the CLI for installing components, as it ensures all necessary files are included._
+Once installed, import the component into your page:
 
-Add to your page and it works!
-
-```jsx
+```tsx
 import Card05 from "@/components/codesnippetui/card-05";
 
 export default function Page() {
-    return <Card05 />;
+  return (
+    <main>
+      <Card05 />
+    </main>
+  );
 }
 ```
 
-import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+You're all set!
 
-### 3. Blocks
+<Callout type="info">
+  Although we provide a convenient copy button for component code, we strongly recommend using the CLI. It automatically installs the required files and helps maintain the correct project structure.
+</Callout>
 
-Blocks are a set of components to make a complete blocks, they contain multiples files. To install them it is mandatory to use the `cli`. For example it you'd like to install `ai-card-generation` block:
+### 4. Installing Blocks
 
-<Tabs items={["bun", "npx", "pnpm"]}>
- 
-```bash tab="bun"
-bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/ai-card-generation.json
-```
- 
-```bash tab="npx"
-npx shadcn@latest add https://codesnippet-ui.vercel.app/r/ai-card-generation.json
-```
+Blocks are collections of multiple components and files designed to create complete sections or interfaces.
 
-```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/ai-card-generation.json
-```
+Unlike individual components, blocks may contain multiple dependencies and supporting files. Therefore, we recommend installing them using the shadcn CLI.
 
+For example, to install the `ai-card-generation` block:
+
+<Tabs items={["bun", "npm", "pnpm"]}>
+  <Tab value="bun">
+    ```bash
+    bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/ai-card-generation.json
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```bash
+    npx shadcn@latest add https://codesnippet-ui.vercel.app/r/ai-card-generation.json
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/ai-card-generation.json
+    ```
+  </Tab>
 </Tabs>
 
-Then, add to your page and it works!
+The CLI will install the block along with its declared supporting components and files.
 
-```jsx
-/**
- * AICardGeneration require 5 additional components
- * that will be automatically installed with the CLI.
- */
+Import the block into your page:
+
+```tsx
 import AICardGeneration from "@/components/codesnippetui/AICardGeneration";
 
 export default function Page() {
-    return <AICardGeneration />;
+  return (
+    <main>
+      <AICardGeneration />
+    </main>
+  );
 }
 ```
 
-### 4. Optionnal dependencies
+<Callout type="info">
+  Some blocks require additional components or dependencies. Check the individual block documentation for installation requirements.
+</Callout>
 
-Some components require additional libraries, listed at the bottom of each components. Make sure to install them to ensure the component works properly.
+### 5. Optional Dependencies
 
-### 5. Monorepo
+Some components use additional third-party libraries for animations, icons, charts, or other functionality.
 
-For monorepo `shadcn/ui` CLI contain the options `-c` to the path to your workspace for exemple:
+These dependencies are listed at the bottom of each component's documentation.
 
-<Tabs items={["bun", "npx", "pnpm"]}>
- 
-```bash tab="bun"
-bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json -c ./apps/www
-```
- 
-```bash tab="npx"
-npx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json -c ./apps/www
-```
+Make sure to install the required dependencies before using those components.
 
-```bash tab="pnpm"
-pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json -c ./apps/www
+For example:
+
+```bash
+npm install framer-motion
 ```
 
+> You only need to install the dependencies required by the components you use.
+
+### 6. Monorepo Support
+
+Are you using a monorepo?
+
+The shadcn CLI supports the `-c` option to specify the workspace directory where you want to install components.
+
+For example, if your Next.js application is located inside `apps/www`:
+
+<Tabs items={["bun", "npm", "pnpm"]}>
+  <Tab value="bun">
+    ```bash
+    bunx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json -c ./apps/www
+    ```
+  </Tab>
+  <Tab value="npm">
+    ```bash
+    npx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json -c ./apps/www
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm dlx shadcn@latest add https://codesnippet-ui.vercel.app/r/card-05.json -c ./apps/www
+    ```
+  </Tab>
 </Tabs>
+
+The CLI will use the specified workspace configuration when resolving the component installation.
+
+### 7. You're Ready to Go! 🎉
+
+You're all set to explore CodeSnippetUI!
+
+Browse our collection of components, blocks, and hooks to find everything you need to build beautiful interfaces.
+
+- Explore [Components](/docs/components/ai-input)
+- Explore [Blocks](/docs/blocks/ai-card-generation)
+- Explore [Hooks](/docs/hooks/use-auto-resize-textarea)

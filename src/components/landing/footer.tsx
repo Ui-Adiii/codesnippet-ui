@@ -18,7 +18,7 @@ const footerLinks = [
       },
       { label: "Blocks", href: "/docs/blocks/ai-card-generation" },
       { label: "Hooks", href: "/docs/hooks//use-auto-resize-textarea" },
-      { label: "AI Chat", href: "docs/components/ai-input" },
+      // { label: "AI Chat", href: "docs/components/ai-input" },
     ],
   },
   {

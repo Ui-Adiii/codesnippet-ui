@@ -10,13 +10,9 @@
         "---Latest---",
         "components/action-search-bar",
         "components/avatar-picker",
-        "components/beams-background",
-        "components/background-circles",
-        "components/background-paths",
         "components/bento-grid",
         "components/checkout-interaction",
         "components/currency-transfer",
-        "components/faq",
         "components/hand-written-title",
         "components/hero-geometric",
         "components/particle-button",
@@ -41,6 +37,8 @@
         "components/profile",
         "components/pricing",
         "components/text",
+        "components/faq",
+        "components/background",
         "---Hooks---",
         "hooks/use-auto-resize-textarea"
     ]

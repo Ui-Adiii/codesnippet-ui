@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Copy, Check, CheckCheck, Terminal } from "lucide-react";
 import { copyComponent } from "@/lib/action";
 import { cn } from "@/lib/utils";
-// import { OpenInV0Button } from "../open-in-v0-button";
 import { AnimatePresence, motion } from "motion/react";
 
 export default function PreviewContent({

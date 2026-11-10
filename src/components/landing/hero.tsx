@@ -7,22 +7,13 @@ import TailwindCSS from "@/components/icons/tailwindcss";
 import { motion } from "motion/react";
 
 import {
-  PlaneTakeoff,
-  BarChart2,
-  Video,
-  AudioLines,
-  Globe,
-  Diamond,
   Sparkles,
-  Code,
-  Layers,
 } from "lucide-react";
 import { BrowseComponentsButton } from "../ui/browse-button";
 import { BrowseBlocksButton } from "../ui/browse-blocks";
-
+import ParticleButton from "../codesnippetui/particle-button"
 import Features from "./features"
 import { Btn14 } from "../codesnippetui/button/btn-14";
-import Btn03 from "../codesnippetui/button/btn-03";
 import Input09 from "../codesnippetui/input/input-09";
 import AIInput_04 from "../codesnippetui/ai-input/ai-input-04";
 
@@ -112,7 +103,7 @@ export function HeroSection() {
           {/* Card component */}
           <div className="w-full flex flex-col items-center justify-center ">
             <span className="text-sm text-zinc-500 dark:text-zinc-400 block text-center mb-2">
-              {"<Card/>"}
+              {"Card"}
             </span>
             <Card08 href="/docs/components/card" />
           </div>
@@ -163,7 +154,7 @@ export function HeroSection() {
                 <Btn14 label="Bring me" className=" w-42 py-5" />
               </Link>
               <Link href="/docs/components/button">
-                <Btn03 className=" w-42 py-5" />
+                <ParticleButton className=" w-42 py-5" />
               </Link>
             </div>
           </div>

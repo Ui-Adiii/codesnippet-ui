@@ -16,7 +16,6 @@
         "components/hand-written-title",
         "components/hero-geometric",
         "components/particle-button",
-        "components/particles-background",
         "components/toolbar",
         "components/tweet-card",
         "components/vercel-v0-chat",

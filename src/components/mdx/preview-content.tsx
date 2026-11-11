@@ -53,7 +53,8 @@ export default function PreviewContent({
 
     const handleTerminalClick = () => {
         const [folder, filename] = link.split("/");
-        const COPY = `npx shadcn@latest add @codesnippet/${filename || folder}`;
+        const COPY = `npx shadcn@latest add ${prePath}/r/${filename ? filename : folder}.json`;
+         console.log(COPY)
         navigator.clipboard.writeText(COPY);
         setIsTerminalCopied(true);
         setTimeout(() => {

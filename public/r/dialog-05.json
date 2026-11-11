@@ -1,0 +1,19 @@
+{
+  "name": "dialog-05",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogMedia,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/components/ui/alert-dialog\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Dialog07() {\n  const [open, setOpen] = React.useState(false);\n\n  return (\n    <AlertDialog open={open} onOpenChange={setOpen}>\n      <AlertDialogTrigger\n        render={<Button variant=\"outline\">View media</Button>}\n      />\n\n      <AlertDialogContent size=\"default\">\n        <AlertDialogHeader>\n          <AlertDialogMedia>\n            <video\n              src=\"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n              className=\"size-10 rounded-md\"\n              aria-label=\"Media preview\"\n              muted\n            />\n          </AlertDialogMedia>\n\n          <AlertDialogTitle>Video preview</AlertDialogTitle>\n\n          <AlertDialogDescription>\n            A short clip demonstrating the new feature in action.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n\n        <AlertDialogFooter>\n          <AlertDialogCancel>Close</AlertDialogCancel>\n          <AlertDialogAction>Watch full</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "path": "components/codesnippetui/dialog/dialog-05.tsx",
+      "target": "components/codesnippetui/dialog-05.tsx"
+    }
+  ]
+}

@@ -1,20 +1,21 @@
 // @ts-nocheck
-import { default as __fd_glob_30 } from "../content/docs/meta.json?collection=meta"
-import * as __fd_glob_29 from "../content/docs/index.mdx?collection=docs"
-import * as __fd_glob_28 from "../content/docs/hooks/use-auto-resize-textarea.mdx?collection=docs"
-import * as __fd_glob_27 from "../content/docs/components/vercel-v0-chat.mdx?collection=docs"
-import * as __fd_glob_26 from "../content/docs/components/tweet-card.mdx?collection=docs"
-import * as __fd_glob_25 from "../content/docs/components/toolbar.mdx?collection=docs"
-import * as __fd_glob_24 from "../content/docs/components/text.mdx?collection=docs"
-import * as __fd_glob_23 from "../content/docs/components/profile.mdx?collection=docs"
-import * as __fd_glob_22 from "../content/docs/components/pricing.mdx?collection=docs"
-import * as __fd_glob_21 from "../content/docs/components/particle-button.mdx?collection=docs"
-import * as __fd_glob_20 from "../content/docs/components/matrix-text.mdx?collection=docs"
-import * as __fd_glob_19 from "../content/docs/components/list.mdx?collection=docs"
-import * as __fd_glob_18 from "../content/docs/components/input.mdx?collection=docs"
-import * as __fd_glob_17 from "../content/docs/components/hero-geometric.mdx?collection=docs"
-import * as __fd_glob_16 from "../content/docs/components/hand-written-title.mdx?collection=docs"
-import * as __fd_glob_15 from "../content/docs/components/faq.mdx?collection=docs"
+import { default as __fd_glob_31 } from "../content/docs/meta.json?collection=meta"
+import * as __fd_glob_30 from "../content/docs/index.mdx?collection=docs"
+import * as __fd_glob_29 from "../content/docs/hooks/use-auto-resize-textarea.mdx?collection=docs"
+import * as __fd_glob_28 from "../content/docs/components/vercel-v0-chat.mdx?collection=docs"
+import * as __fd_glob_27 from "../content/docs/components/tweet-card.mdx?collection=docs"
+import * as __fd_glob_26 from "../content/docs/components/toolbar.mdx?collection=docs"
+import * as __fd_glob_25 from "../content/docs/components/text.mdx?collection=docs"
+import * as __fd_glob_24 from "../content/docs/components/profile.mdx?collection=docs"
+import * as __fd_glob_23 from "../content/docs/components/pricing.mdx?collection=docs"
+import * as __fd_glob_22 from "../content/docs/components/particle-button.mdx?collection=docs"
+import * as __fd_glob_21 from "../content/docs/components/matrix-text.mdx?collection=docs"
+import * as __fd_glob_20 from "../content/docs/components/list.mdx?collection=docs"
+import * as __fd_glob_19 from "../content/docs/components/input.mdx?collection=docs"
+import * as __fd_glob_18 from "../content/docs/components/hero-geometric.mdx?collection=docs"
+import * as __fd_glob_17 from "../content/docs/components/hand-written-title.mdx?collection=docs"
+import * as __fd_glob_16 from "../content/docs/components/faq.mdx?collection=docs"
+import * as __fd_glob_15 from "../content/docs/components/dialog.mdx?collection=docs"
 import * as __fd_glob_14 from "../content/docs/components/currency-transfer.mdx?collection=docs"
 import * as __fd_glob_13 from "../content/docs/components/checkout-interaction.mdx?collection=docs"
 import * as __fd_glob_12 from "../content/docs/components/card.mdx?collection=docs"
@@ -38,6 +39,6 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>();
 
-export const docs = await create.doc("docs", "content/docs", {"blocks/ai-card-generation.mdx": __fd_glob_0, "blocks/ai-chat.mdx": __fd_glob_1, "blocks/auth-basic.mdx": __fd_glob_2, "blocks/dashboard.mdx": __fd_glob_3, "blocks/minimal-shop.mdx": __fd_glob_4, "components/action-search-bar.mdx": __fd_glob_5, "components/ai-input.mdx": __fd_glob_6, "components/alert.mdx": __fd_glob_7, "components/avatar-picker.mdx": __fd_glob_8, "components/background.mdx": __fd_glob_9, "components/bento-grid.mdx": __fd_glob_10, "components/button.mdx": __fd_glob_11, "components/card.mdx": __fd_glob_12, "components/checkout-interaction.mdx": __fd_glob_13, "components/currency-transfer.mdx": __fd_glob_14, "components/faq.mdx": __fd_glob_15, "components/hand-written-title.mdx": __fd_glob_16, "components/hero-geometric.mdx": __fd_glob_17, "components/input.mdx": __fd_glob_18, "components/list.mdx": __fd_glob_19, "components/matrix-text.mdx": __fd_glob_20, "components/particle-button.mdx": __fd_glob_21, "components/pricing.mdx": __fd_glob_22, "components/profile.mdx": __fd_glob_23, "components/text.mdx": __fd_glob_24, "components/toolbar.mdx": __fd_glob_25, "components/tweet-card.mdx": __fd_glob_26, "components/vercel-v0-chat.mdx": __fd_glob_27, "hooks/use-auto-resize-textarea.mdx": __fd_glob_28, "index.mdx": __fd_glob_29, });
+export const docs = await create.doc("docs", "content/docs", {"blocks/ai-card-generation.mdx": __fd_glob_0, "blocks/ai-chat.mdx": __fd_glob_1, "blocks/auth-basic.mdx": __fd_glob_2, "blocks/dashboard.mdx": __fd_glob_3, "blocks/minimal-shop.mdx": __fd_glob_4, "components/action-search-bar.mdx": __fd_glob_5, "components/ai-input.mdx": __fd_glob_6, "components/alert.mdx": __fd_glob_7, "components/avatar-picker.mdx": __fd_glob_8, "components/background.mdx": __fd_glob_9, "components/bento-grid.mdx": __fd_glob_10, "components/button.mdx": __fd_glob_11, "components/card.mdx": __fd_glob_12, "components/checkout-interaction.mdx": __fd_glob_13, "components/currency-transfer.mdx": __fd_glob_14, "components/dialog.mdx": __fd_glob_15, "components/faq.mdx": __fd_glob_16, "components/hand-written-title.mdx": __fd_glob_17, "components/hero-geometric.mdx": __fd_glob_18, "components/input.mdx": __fd_glob_19, "components/list.mdx": __fd_glob_20, "components/matrix-text.mdx": __fd_glob_21, "components/particle-button.mdx": __fd_glob_22, "components/pricing.mdx": __fd_glob_23, "components/profile.mdx": __fd_glob_24, "components/text.mdx": __fd_glob_25, "components/toolbar.mdx": __fd_glob_26, "components/tweet-card.mdx": __fd_glob_27, "components/vercel-v0-chat.mdx": __fd_glob_28, "hooks/use-auto-resize-textarea.mdx": __fd_glob_29, "index.mdx": __fd_glob_30, });
 
-export const meta = await create.meta("meta", "content/docs", {"meta.json": __fd_glob_30, });
+export const meta = await create.meta("meta", "content/docs", {"meta.json": __fd_glob_31, });

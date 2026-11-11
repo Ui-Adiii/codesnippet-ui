@@ -37,6 +37,7 @@
         "components/pricing",
         "components/text",
         "components/faq",
+        "components/dialog", 
         "components/background",
         "---Hooks---",
         "hooks/use-auto-resize-textarea"

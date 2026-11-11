@@ -2,6 +2,78 @@ import type { Registry } from "./schema";
 
 export const component: Registry = [
     {
+        name: "dialog-01",
+        type: "registry:component",
+        dependencies: ["lucide-react"],
+        registryDependencies: ["dialog","button"],
+        files: [
+            {
+                path: "components/codesnippetui/dialog/dialog-01.tsx",
+                type: "registry:component",
+            },
+        ],
+    },
+    {
+        name: "dialog-02",
+        type: "registry:component",
+        dependencies: ["lucide-react"],
+        registryDependencies: ["dialog","button"],
+        files: [
+            {
+                path: "components/codesnippetui/dialog/dialog-02.tsx",
+                type: "registry:component",
+            },
+        ],
+    },
+    {
+        name: "dialog-03",
+        type: "registry:component",
+        dependencies: ["lucide-react"],
+        registryDependencies: ["dialog","button","input","label","field"],
+        files: [
+            {
+                path: "components/codesnippetui/dialog/dialog-03.tsx",
+                type: "registry:component",
+            },
+        ],
+    },
+    {
+        name: "dialog-04",
+        type: "registry:component",
+        dependencies: ["lucide-react"],
+        registryDependencies: ["dialog","button"],
+        files: [
+            {
+                path: "components/codesnippetui/dialog/dialog-04.tsx",
+                type: "registry:component",
+            },
+        ],
+    },
+    {
+        name: "dialog-05",
+        type: "registry:component",
+        dependencies: ["lucide-react"],
+        registryDependencies: ["dialog","button"],
+        files: [
+            {
+                path: "components/codesnippetui/dialog/dialog-05.tsx",
+                type: "registry:component",
+            },
+        ],
+    },
+    {
+        name: "dialog-06",
+        type: "registry:component",
+        dependencies: ["lucide-react"],
+        registryDependencies: ["dialog","button","tabs"],
+        files: [
+            {
+                path: "components/codesnippetui/dialog/dialog-06.tsx",
+                type: "registry:component",
+            },
+        ],
+    },
+    {
         name: "ai-input-01",
         type: "registry:component",
         dependencies: ["lucide-react"],

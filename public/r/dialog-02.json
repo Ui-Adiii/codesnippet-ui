@@ -1,0 +1,19 @@
+{
+  "name": "dialog-02",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "dialog",
+    "button"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/components/ui/alert-dialog\";\n\nimport { Button } from \"@/components/ui/button\";\n\nexport default function Dialog02() {\n  const [open, setOpen] = React.useState(false);\n\n  return (\n    <AlertDialog open={open} onOpenChange={setOpen}>\n      <AlertDialogTrigger\n        render={<Button variant=\"destructive\">Delete account</Button>}\n      />\n\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Delete account?</AlertDialogTitle>\n          <AlertDialogDescription>\n            This will permanently remove your profile and all associated data.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction variant=\"destructive\">\n            Delete account\n          </AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n",
+      "path": "components/codesnippetui/dialog/dialog-02.tsx",
+      "target": "components/codesnippetui/dialog-02.tsx"
+    }
+  ]
+}

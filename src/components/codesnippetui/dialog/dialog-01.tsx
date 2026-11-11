@@ -23,15 +23,16 @@ export default function Dialog01() {
 
       <DialogContent showCloseButton={false}>
         <DialogHeader>
-          <DialogTitle>Confirm action</DialogTitle>
+          <DialogTitle>Welcome to CodeSnippetUI</DialogTitle>
           <DialogDescription>
-            This will permanently delete the item and cannot be undone.
+            Explore our collection of modern and customizable UI components
+            built for React and Next.js.
           </DialogDescription>
         </DialogHeader>
 
         <DialogFooter>
           <DialogClose render={<Button variant="outline">Cancel</Button>} />
-          <Button variant="destructive">Delete</Button>
+          <Button onClick={() => setOpen(false)}>Get started</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

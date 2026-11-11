@@ -66,9 +66,9 @@ export default function Dialog08() {
                       Theme
                     </label>
                     <select className="h-8 w-full rounded-lg border border-input bg-input/30 px-2.5 text-sm focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50">
-                      <option>System</option>
-                      <option>Light</option>
-                      <option>Dark</option>
+                      <option className="dark:text-black">System</option>
+                      <option className="dark:text-black">Light</option>
+                      <option className="dark:text-black">Dark</option>
                     </select>
                   </div>
                   <div className="space-y-2">
@@ -76,9 +76,9 @@ export default function Dialog08() {
                       Notifications
                     </label>
                     <select className="h-8 w-full rounded-lg border border-input bg-input/30 px-2.5 text-sm focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50">
-                      <option>All</option>
-                      <option>Important only</option>
-                      <option>None</option>
+                      <option  className="dark:text-black">All</option>
+                      <option  className="dark:text-black">Important only</option>
+                      <option  className="dark:text-black">None</option>
                     </select>
                   </div>
                 </TabsContent>

@@ -21,6 +21,9 @@ const CENTERED_COMPONENTS = [
     "action-search-bar",
     "blocks/ai-card-generation",
     "vercel-v0-chat",
+    "toolbar",
+    "dialog",
+    "dropdown"
     // Add more small components here
 ];
 
@@ -55,7 +58,9 @@ export default async function PreviewPage({
                 <Component />
             </div>
         ) : (
-            <Component />
+           <div className="min-h-screen overflow-hidden">
+                <Component />
+            </div>
         );
     } catch (error) {
         console.error("Error loading component:", error);

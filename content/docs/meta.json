@@ -39,6 +39,7 @@
         "components/faq",
         "components/dialog", 
         "components/background",
+        "components/dropdown",
         "---Hooks---",
         "hooks/use-auto-resize-textarea"
     ]

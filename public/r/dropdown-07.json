@@ -1,0 +1,24 @@
+{
+  "name": "dropdown-07",
+  "type": "registry:component",
+  "dependencies": [
+    ""
+  ],
+  "registryDependencies": [
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport {\n  DropdownMenu,\n  DropdownMenuTrigger,\n  DropdownMenuContent,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n} from \"@/components/ui/dropdown-menu\"\nimport type { SelectOption } from \"./types\"\n\nconst DEFAULT_OPTIONS: SelectOption[] = [\n  { label: \"React\", value: \"react\" },\n  { label: \"Next.js\", value: \"nextjs\" },\n]\n\ninterface RadioDropdownProps {\n  trigger?: React.ReactNode\n  options?: SelectOption[]\n  value?: string\n  defaultValue?: string\n  onValueChange?: (value: string) => void\n}\n\nexport function RadioDropdown({\n  trigger = <span className=\"text-sm font-medium\">Choose</span>,\n  options = DEFAULT_OPTIONS,\n  value,\n  defaultValue,\n  onValueChange,\n}: RadioDropdownProps) {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger>\n        <button\n          type=\"button\"\n          className=\"inline-flex items-center justify-center rounded-md border border-input bg-transparent px-3 py-2 text-sm font-medium text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\"\n        >\n          {trigger}\n        </button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuRadioGroup\n          value={value}\n          defaultValue={defaultValue}\n          onValueChange={(v) => onValueChange?.(v as string)}\n        >\n          {options.map((option) => (\n            <DropdownMenuRadioItem\n              key={option.value}\n              value={option.value}\n              disabled={option.disabled}\n            >\n              {option.label}\n            </DropdownMenuRadioItem>\n          ))}\n        </DropdownMenuRadioGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default RadioDropdown\n",
+      "path": "components/codesnippetui/dropdown/dropdown-07.tsx",
+      "target": "components/codesnippetui/dropdown-07.tsx"
+    },
+    {
+      "type": "registry:component",
+      "content": "export interface SelectOption {\n  label: string\n  value: string\n  disabled?: boolean\n  icon?: React.ReactNode\n}\n",
+      "path": "components/codesnippetui/dropdown/types.ts",
+      "target": "components/codesnippetui/types.ts"
+    }
+  ]
+}

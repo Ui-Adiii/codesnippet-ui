@@ -1,0 +1,24 @@
+{
+  "name": "dropdown-03",
+  "type": "registry:component",
+  "dependencies": [
+    ""
+  ],
+  "registryDependencies": [
+    "select"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  Select,\n  SelectTrigger,\n  SelectValue,\n  SelectContent,\n  SelectItem,\n} from \"@/components/ui/select\"\nimport type { SelectOption } from \"./types\"\n\nconst DEFAULT_OPTIONS: SelectOption[] = [\n  { label: \"React\", value: \"react\" },\n  { label: \"Next.js\", value: \"nextjs\" },\n  { label: \"Vue\", value: \"vue\" },\n]\n\ninterface MultiSelectProps {\n  options?: SelectOption[]\n  value?: string[]\n  defaultValue?: string[]\n  placeholder?: string\n  disabled?: boolean\n  onValueChange?: (values: string[]) => void\n}\n\nexport function MultiSelect({\n  options = DEFAULT_OPTIONS,\n  value,\n  defaultValue,\n  placeholder = \"Select options\",\n  disabled,\n  onValueChange,\n}: MultiSelectProps) {\n  const [values, setValues] = React.useState<string[]>(defaultValue ?? [])\n  const controlled = value !== undefined\n  const currentValues = controlled ? value : values\n\n  const handleValueChange = (next: string | null) => {\n    const nextValues = next ? next.split(\",\") : []\n    if (!controlled) {\n      setValues(nextValues)\n    }\n    onValueChange?.(nextValues)\n  }\n\n  return (\n    <Select\n      value={currentValues.join(\",\")}\n      defaultValue={defaultValue?.join(\",\")}\n      onValueChange={handleValueChange}\n      disabled={disabled}\n    >\n      <SelectTrigger className=\"w-[260px]\">\n        <SelectValue placeholder={placeholder} />\n        {currentValues.map((val) => {\n          const option = options.find((o) => o.value === val)\n          if (!option) return null\n          return (\n            <span key={val} className=\"mr-2 inline-flex items-center gap-1.5 rounded-full bg-muted px-2 py-0.5 text-xs text-muted-foreground\">\n              {option.label}\n            </span>\n          )\n        })}\n      </SelectTrigger>\n      <SelectContent>\n        {options.map((option) => (\n          <SelectItem\n            key={option.value}\n            value={option.value}\n            disabled={option.disabled}\n          >\n            {option.label}\n          </SelectItem>\n        ))}\n      </SelectContent>\n    </Select>\n  )\n}\n\nexport default MultiSelect\n",
+      "path": "components/codesnippetui/dropdown/dropdown-03.tsx",
+      "target": "components/codesnippetui/dropdown-03.tsx"
+    },
+    {
+      "type": "registry:component",
+      "content": "export interface SelectOption {\n  label: string\n  value: string\n  disabled?: boolean\n  icon?: React.ReactNode\n}\n",
+      "path": "components/codesnippetui/dropdown/types.ts",
+      "target": "components/codesnippetui/types.ts"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "dropdwon-01",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  DropdownMenu,\n  DropdownMenuTrigger,\n  DropdownMenuContent,\n  DropdownMenuItem,\n} from \"@/components/ui/dropdown-menu\"\nimport { MoreHorizontalIcon } from \"lucide-react\"\n\nconst DEFAULT_ITEMS = [\n  { label: \"Edit\", value: \"edit\" },\n  { label: \"Duplicate\", value: \"duplicate\" },\n  { label: \"Delete\", value: \"delete\", destructive: true },\n]\n\ninterface BasicDropdownProps {\n  trigger?: React.ReactNode\n  items?: {\n    label: string\n    value: string\n    disabled?: boolean\n    shortcut?: string\n    icon?: React.ReactNode\n    destructive?: boolean\n  }[]\n  onItemSelect?: (value: string) => void\n}\n\nexport default function BasicDropdown({\n  trigger = <span className=\"text-sm font-medium\">Actions</span>,\n  items = DEFAULT_ITEMS,\n  onItemSelect,\n}: BasicDropdownProps) {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger>\n        <span\n          className=\"inline-flex items-center rounded-md border border-input bg-transparent px-3 py-2 text-sm font-medium text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\"\n        >\n          {trigger}\n          <MoreHorizontalIcon className=\"ml-2 size-4\" />\n        </span>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        {items.map((item) => (\n          <DropdownMenuItem\n            key={item.value}\n            disabled={item.disabled}\n            onSelect={() => {\n              onItemSelect?.(item.value)\n            }}\n            data-variant={item.destructive ? \"destructive\" : \"default\"}\n          >\n            {item.icon && (\n              <span className=\"mr-2 h-4 w-4 shrink-0\">{item.icon}</span>\n            )}\n            {item.label}\n            {item.shortcut && <span className=\"ml-auto text-xs text-muted-foreground\">{item.shortcut}</span>}\n          </DropdownMenuItem>\n        ))}\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n",
+      "path": "components/codesnippetui/dropdown/dropdown-01.tsx",
+      "target": "components/codesnippetui/dropdown-01.tsx"
+    }
+  ]
+}

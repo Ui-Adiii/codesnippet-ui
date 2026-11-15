@@ -28,7 +28,7 @@ interface BasicDropdownProps {
   onItemSelect?: (value: string) => void
 }
 
-export function BasicDropdown({
+export default function BasicDropdown({
   trigger = <span className="text-sm font-medium">Actions</span>,
   items = DEFAULT_ITEMS,
   onItemSelect,
@@ -64,5 +64,3 @@ export function BasicDropdown({
     </DropdownMenu>
   )
 }
-
-export default BasicDropdown

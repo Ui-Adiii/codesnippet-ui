@@ -8,7 +8,7 @@
       "---Get Started---",
       "index",
       "---Latest---",
-      "templates/portfolio",
+      "templates/hero",
       "components/action-search-bar",
       "components/avatar-picker",
       "components/bento-grid",

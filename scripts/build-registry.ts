@@ -70,7 +70,7 @@ const getComponentFiles = async (files: File[], registryType: string) => {
       type: fileType,
       content: fileContent,
       path: sourcePath,
-      target,
+      target: sourcePath,
     };
   });
 

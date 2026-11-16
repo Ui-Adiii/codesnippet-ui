@@ -12,13 +12,13 @@
       "type": "registry:component",
       "content": "\"use client\"\n\nimport {\n  Combobox,\n  ComboboxInput,\n  ComboboxContent,\n  ComboboxList,\n  ComboboxItem,\n  ComboboxEmpty,\n} from \"@/components/ui/combobox\"\nimport type { SelectOption } from \"./types\"\n\nconst DEFAULT_OPTIONS: SelectOption[] = [\n  { label: \"React\", value: \"react\" },\n  { label: \"Next.js\", value: \"nextjs\" },\n  { label: \"Vue\", value: \"vue\" },\n]\n\ninterface SearchableDropdownProps {\n  options?: SelectOption[]\n  value?: string\n  defaultValue?: string\n  placeholder?: string\n  disabled?: boolean\n  onValueChange?: (value: string) => void\n}\n\nexport function SearchableDropdown({\n  options = DEFAULT_OPTIONS,\n  value,\n  defaultValue,\n  placeholder = \"Search options\",\n  disabled,\n  onValueChange,\n}: SearchableDropdownProps) {\n  return (\n    <Combobox\n      value={value}\n      defaultValue={defaultValue}\n      onValueChange={(v) => onValueChange?.(v as string)}\n      disabled={disabled}\n    >\n      <ComboboxInput\n        placeholder={placeholder}\n        render={<input data-slot=\"combobox-input\" className=\"flex-1 px-2 border-none bg-transparent outline-none text-sm\" />}\n      />\n      <ComboboxContent>\n        {options.length > 0 ? (\n          <ComboboxList>\n            {options.map((option) => (\n              <ComboboxItem\n                key={option.value}\n                value={option.value}\n                disabled={option.disabled}\n              >\n                {option.label}\n              </ComboboxItem>\n            ))}\n          </ComboboxList>\n        ) : (\n          <ComboboxEmpty>No options found</ComboboxEmpty>\n        )}\n      </ComboboxContent>\n    </Combobox>\n  )\n}\n\nexport default SearchableDropdown\n",
       "path": "components/codesnippetui/dropdown/dropdown-04.tsx",
-      "target": "components/codesnippetui/dropdown-04.tsx"
+      "target": "components/codesnippetui/dropdown/dropdown-04.tsx"
     },
     {
       "type": "registry:component",
       "content": "export interface SelectOption {\n  label: string\n  value: string\n  disabled?: boolean\n  icon?: React.ReactNode\n}\n",
       "path": "components/codesnippetui/dropdown/types.ts",
-      "target": "components/codesnippetui/types.ts"
+      "target": "components/codesnippetui/dropdown/types.ts"
     }
   ]
 }

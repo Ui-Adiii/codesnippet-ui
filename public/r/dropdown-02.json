@@ -12,13 +12,13 @@
       "type": "registry:component",
       "content": "\"use client\"\n\nimport {\n  Select,\n  SelectTrigger,\n  SelectValue,\n  SelectContent,\n  SelectItem,\n} from \"@/components/ui/select\"\nimport type { SelectOption } from \"./types\"\n\nconst DEFAULT_OPTIONS: SelectOption[] = [\n  { label: \"React\", value: \"react\" },\n  { label: \"Next.js\", value: \"nextjs\" },\n  { label: \"Vue\", value: \"vue\" },\n]\n\ninterface SelectDropdownProps {\n  options?: SelectOption[]\n  value?: string\n  defaultValue?: string\n  placeholder?: string\n  disabled?: boolean\n  onValueChange?: (value: string) => void\n}\n\nexport function SelectDropdown({\n  options = DEFAULT_OPTIONS,\n  value,\n  defaultValue,\n  placeholder = \"Select an option\",\n  disabled,\n  onValueChange,\n}: SelectDropdownProps) {\n  return (\n    <Select\n      value={value}\n      defaultValue={defaultValue}\n      onValueChange={(v) => onValueChange?.(v as string)}\n      disabled={disabled}\n    >\n      <SelectTrigger className=\"w-[220px]\">\n        <SelectValue placeholder={placeholder} />\n      </SelectTrigger>\n      <SelectContent>\n        {options.map((option) => (\n          <SelectItem key={option.value} value={option.value} disabled={option.disabled}>\n            {option.label}\n          </SelectItem>\n        ))}\n      </SelectContent>\n    </Select>\n  )\n}\n\nexport default SelectDropdown\n",
       "path": "components/codesnippetui/dropdown/dropdown-02.tsx",
-      "target": "components/codesnippetui/dropdown-02.tsx"
+      "target": "components/codesnippetui/dropdown/dropdown-02.tsx"
     },
     {
       "type": "registry:component",
       "content": "export interface SelectOption {\n  label: string\n  value: string\n  disabled?: boolean\n  icon?: React.ReactNode\n}\n",
       "path": "components/codesnippetui/dropdown/types.ts",
-      "target": "components/codesnippetui/types.ts"
+      "target": "components/codesnippetui/dropdown/types.ts"
     }
   ]
 }

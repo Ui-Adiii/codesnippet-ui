@@ -12,13 +12,13 @@
       "type": "registry:component",
       "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  DropdownMenu,\n  DropdownMenuTrigger,\n  DropdownMenuContent,\n  DropdownMenuCheckboxItem,\n} from \"@/components/ui/dropdown-menu\"\nimport type { SelectOption } from \"./types\"\n\nconst DEFAULT_OPTIONS: SelectOption[] = [\n  { label: \"React\", value: \"react\" },\n  { label: \"Next.js\", value: \"nextjs\" },\n]\n\ninterface CheckboxDropdownProps {\n  trigger?: React.ReactNode\n  options?: SelectOption[]\n  value?: string[]\n  defaultValue?: string[]\n  onValueChange?: (values: string[]) => void\n}\n\nexport function CheckboxDropdown({\n  trigger = <span className=\"text-sm font-medium\">Options</span>,\n  options = DEFAULT_OPTIONS,\n  value,\n  defaultValue,\n  onValueChange,\n}: CheckboxDropdownProps) {\n  const [values, setValues] = React.useState<string[]>(defaultValue ?? [])\n  const controlled = value !== undefined\n  const currentValues = controlled ? value : values\n\n  const toggle = (val: string) => {\n    const next = currentValues.includes(val)\n      ? currentValues.filter((v) => v !== val)\n      : [...currentValues, val]\n    if (!controlled) {\n      setValues(next)\n    }\n    onValueChange?.(next)\n  }\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger>\n        <button\n          type=\"button\"\n          className=\"inline-flex items-center justify-center rounded-md border border-input bg-transparent px-3 py-2 text-sm font-medium text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50\"\n        >\n          {trigger}\n        </button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        {options.map((option) => (\n          <DropdownMenuCheckboxItem\n            key={option.value}\n            checked={currentValues.includes(option.value)}\n            disabled={option.disabled}\n            onCheckedChange={() => toggle(option.value)}\n          >\n            {option.label}\n          </DropdownMenuCheckboxItem>\n        ))}\n      </DropdownMenuContent>\n    </DropdownMenu>\n  )\n}\n\nexport default CheckboxDropdown\n",
       "path": "components/codesnippetui/dropdown/dropdown-06.tsx",
-      "target": "components/codesnippetui/dropdown-06.tsx"
+      "target": "components/codesnippetui/dropdown/dropdown-06.tsx"
     },
     {
       "type": "registry:component",
       "content": "export interface SelectOption {\n  label: string\n  value: string\n  disabled?: boolean\n  icon?: React.ReactNode\n}\n",
       "path": "components/codesnippetui/dropdown/types.ts",
-      "target": "components/codesnippetui/types.ts"
+      "target": "components/codesnippetui/dropdown/types.ts"
     }
   ]
 }

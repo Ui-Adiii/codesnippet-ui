@@ -5,9 +5,7 @@
     "lucide-react",
     "motion"
   ],
-  "registryDependencies": [
-    "cn"
-  ],
+  "registryDependencies": [],
   "files": [
     {
       "type": "registry:lib",

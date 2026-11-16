@@ -4,8 +4,8 @@ export const template: Registry = [
   {
     name: "portfolio",
     type: "registry:block",
-    dependencies: ["lucide-react", "motion"],
-    registryDependencies: ["cn"],
+    dependencies: ["lucide-react", "motion", "cn"],
+    registryDependencies: [],
     files: [
       {
         path: "components/codesnippetui/templates/portfolio/lib/data.ts",

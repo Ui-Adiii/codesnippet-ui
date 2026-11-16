@@ -4,7 +4,7 @@ export const template: Registry = [
   {
     name: "portfolio",
     type: "registry:block",
-    dependencies: ["lucide-react", "motion", "cn"],
+    dependencies: ["lucide-react", "motion"],
     registryDependencies: [],
     files: [
       {

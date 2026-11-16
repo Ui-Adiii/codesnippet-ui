@@ -157,6 +157,7 @@ export const projects = [
     technologies: ["Next.js", "TypeScript", "shiki", "shadcn/ui", "PostgreSQL"],
     github: "https://github.com",
     live: "https://example.com",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800",
     details: {
       overview:
         "Code Snippet Lab lets developers save reusable code snippets, organize them by language and tags, and share public snippets via short URLs. Includes full-text search and syntax highlighting powered by Shiki.",
@@ -222,7 +223,7 @@ export const projects = [
     ],
     github: "https://github.com",
     live: "https://example.com",
-
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800",
     details: {
       overview:
         "A collaborative task manager inspired by Kanban boards. Teams create workspaces, boards, and cards, with real-time updates so everyone sees changes instantly.",
@@ -283,6 +284,7 @@ export const projects = [
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "Tailwind"],
     github: "https://github.com",
     live: "https://example.com",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800",
     details: {
       overview:
         "A URL shortener that lets users create custom short links, track click analytics over time, and generate QR codes for offline sharing.",
@@ -313,7 +315,7 @@ export const blogPosts = [
     date: "2024-01-15",
     readingTime: "8 min read",
     tags: ["Next.js", "React", "Performance"],
-    // url: "/blog/why-nextjs-app-router",
+    url: "#",
   },
   {
     id: "accessible-color-systems",
@@ -323,7 +325,7 @@ export const blogPosts = [
     date: "2023-11-22",
     readingTime: "6 min read",
     tags: ["Accessibility", "Design", "CSS"],
-    // url: "/blog/accessible-color-systems",
+    url: "#",
   },
   {
     id: "debugging-nextjs-performance",
@@ -333,6 +335,6 @@ export const blogPosts = [
     date: "2023-09-10",
     readingTime: "10 min read",
     tags: ["Next.js", "Performance", "Debugging"],
-    url: "/blog/debugging-nextjs-performance",
+    url: "#",
   },
 ] as const

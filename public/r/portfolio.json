@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "type": "registry:template",
+  "type": "registry:block",
   "dependencies": [
     "lucide-react",
     "motion"

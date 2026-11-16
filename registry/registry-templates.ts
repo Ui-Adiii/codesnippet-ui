@@ -3,7 +3,7 @@ import type { Registry } from "./schema";
 export const template: Registry = [
   {
     name: "portfolio",
-    type: "registry:template",
+    type: "registry:block",
     dependencies: ["lucide-react", "motion"],
     registryDependencies: ["cn"],
     files: [

@@ -54,10 +54,7 @@ const getComponentFiles = async (files: File[], registryType: string) => {
 
         case "registry:template":
           return `templates/${fileName}`;
-
-        case "registry:page":
-          return `pages/${fileName}`;
-
+          
         default:
           return `components/codesnippetui/${fileName}`;
       }

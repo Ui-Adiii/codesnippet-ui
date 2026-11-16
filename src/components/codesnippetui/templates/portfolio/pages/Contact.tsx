@@ -3,9 +3,9 @@
 import { useState } from "react"
 import { motion } from "motion/react"
 import { fadeInUp, item, staggerChildren } from "../lib/motion"
-import { socials } from "../data/data"
+import { socials } from "../lib/data"
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 
 const SOCIAL_LINKS = socials
 

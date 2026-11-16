@@ -23,6 +23,7 @@ export const registryItemTypeSchema = z.enum([
     "registry:hook",
     "registry:theme",
     "registry:page",
+    "registry:template",
 ]);
 
 export const registryItemFileSchema = z.union([

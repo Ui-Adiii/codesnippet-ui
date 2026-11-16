@@ -4,9 +4,9 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { MenuIcon, XIcon, SunIcon, MoonIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 import { useTheme } from "../context/theme-provider"
-import { navLinks, socials } from "../data/data"
+import { navLinks, socials } from "../lib/data"
 
 const NAV_LINKS = navLinks
 const SOCIAL_LINKS = socials

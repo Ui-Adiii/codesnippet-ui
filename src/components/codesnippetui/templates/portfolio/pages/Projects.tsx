@@ -4,9 +4,9 @@ import React from "react"
 import { motion } from "motion/react"
 import Link from "next/link"
 import { fadeInUp, item, staggerChildren, slideIn } from "../lib/motion"
-import { projects } from "../data/data"
+import { projects } from "../lib/data"
 import { ExternalLinkIcon, GitBranchIcon } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = React.useState<string>("All")

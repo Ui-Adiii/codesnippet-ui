@@ -5,8 +5,8 @@ import React from "react"
 import Link from "next/link"
 import { GitBranchIcon, LinkIcon, XIcon } from "lucide-react"
 import { fadeInUp, staggerChildren } from "../lib/motion"
-import { heroRoles, socials } from "../data/data"
-import { cn } from "@/lib/utils"
+import { heroRoles, socials } from "../lib/data"
+import { cn } from "../lib/utils"
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = React.useState(0)

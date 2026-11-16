@@ -4,7 +4,7 @@ import Link from "next/link"
 import { motion } from "motion/react"
 
 import { fadeInUp, item, staggerChildren } from "../lib/motion"
-import { blogPosts } from "../data/data"
+import { blogPosts } from "../lib/data"
 import { BookOpenIcon, ClockIcon, TagIcon } from "lucide-react"
 
 export default function Blog() {

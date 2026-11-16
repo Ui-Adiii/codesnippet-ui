@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 import { fadeInUp, item, staggerChildren } from "../lib/motion"
-import { skills } from "../data/data"
+import { skills } from "../lib/data"
 import { Code2Icon, MonitorIcon, DatabaseIcon, CpuIcon, SettingsIcon, BrainIcon } from "lucide-react"
 
 const CATEGORY_ICONS: Record<string, React.ElementType> = {

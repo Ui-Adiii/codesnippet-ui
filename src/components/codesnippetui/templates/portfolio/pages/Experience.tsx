@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 import { fadeInUp, item, staggerChildren } from "../lib/motion"
-import { experience } from "../data/data"
+import { experience } from "../lib/data"
 
 export default function Experience() {
   return (

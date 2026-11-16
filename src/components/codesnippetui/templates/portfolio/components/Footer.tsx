@@ -1,9 +1,9 @@
 "use client"
 
-import { cn } from "@/lib/utils"
+import { cn } from "../lib/utils"
 import { useEffect, useState } from "react"
 
-import { socials } from "../data/data"
+import { socials } from "../lib/data"
 
 export default function Footer() {
   const [scrolled, setScrolled] = useState(false)

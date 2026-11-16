@@ -1,4 +1,4 @@
-import { education } from "../data/data"
+import { education } from "../lib/data"
 
 export default function Education() {
   return (

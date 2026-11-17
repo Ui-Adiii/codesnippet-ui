@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useMemo, useState } from "react"
-import { articles, categories } from "./data/data"
+import { articles, categories } from "./lib/data"
 import { ThemeProvider } from "./context/theme-provider"
 
 import Navbar from "./components/Navbar"

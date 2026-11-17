@@ -4,7 +4,7 @@ import { motion } from "motion/react"
 import Link from "next/link"
 import { ClockIcon, ArrowLeftRightIcon } from "lucide-react"
 import { cn } from "../lib/utils"
-import { formatDate, type Article } from "../data/data"
+import { formatDate, type Article } from "../lib/data"
 
 export const ArticleCard = ({
   article,

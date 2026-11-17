@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react"
 import { cn } from "../lib/utils"
-import { type Category } from "../data/data"
+import { type Category } from "../lib/data"
 import { fadeInUp, item, staggerChildren } from "../lib/motion"
 
 type CategoriesProps = {

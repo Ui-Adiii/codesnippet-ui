@@ -4,7 +4,7 @@ import { useCallback } from "react"
 import { motion, AnimatePresence } from "motion/react"
 import { cn } from "../lib/utils"
 import { ArticleCard } from "../components/ArticleCard"
-import { type Article, type Category } from "../data/data"
+import { type Article, type Category } from "../lib/data"
 import { fadeInUp, item, staggerChildren } from "../lib/motion"
 
 type LatestProps = {

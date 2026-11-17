@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { motion } from "motion/react"
 import { ArticleCard } from "../components/ArticleCard"
-import { type Article } from "../data/data"
+import { type Article } from "../lib/data"
 import { fadeInUp, item } from "../lib/motion"
 
 export default function Featured({
